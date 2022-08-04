@@ -1,0 +1,6 @@
+#regForm{
+    background:linear-gradient(to left, rgb(3, 87, 87), magenta);
+    margin: 4px auto;
+    width: 400px;
+    height: 100vh;
+}
