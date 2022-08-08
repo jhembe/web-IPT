@@ -21,10 +21,7 @@ function showTab(n) {
   fixStepIndicator(n);
 }
 
-function openCalc(){
-    console.log("finished")
-    // window.open("www.google.com",'blank')
-}
+
 
 function nextPrev(n) {
   // This function will figure out which tab to display

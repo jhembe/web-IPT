@@ -1,6 +1,7 @@
 *, *::before, *::after{
     box-sizing: border-box;
     font-weight: normal;
+    color: black;
 }
 
 body{
@@ -70,7 +71,8 @@ body{
 
 .span-three{
     grid-column: span 3;
-    background-color: white;
+    background-color: rgb(116, 49, 49);
+    color: black;
     margin-bottom: 6px;
     border-radius: 0.2em;
 }
@@ -79,9 +81,11 @@ body{
     visibility: hidden;
 }
 
+
 .output{
     /* display: flex; */
     height: 50px;
+    color: black;
 }
 
 .output p{
@@ -91,6 +95,7 @@ body{
     align-items: right;
     font-family: 'Source Code Pro';
     font-weight: bold;
+    color: black;
     /* display: inline-block; */
 }
 

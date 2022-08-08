@@ -11,6 +11,8 @@ class Calculator {
     this.operation = undefined
   }
 
+
+
   appendNumber(number) {
     if (number === '.' && this.currentOperand.includes('.')) return
     this.currentOperand = this.currentOperand.toString() + number.toString()
@@ -41,7 +43,7 @@ class Calculator {
       case '*':
         computation = prev * current
         break
-      case '/':
+      case '÷':
         computation = prev / current
         break
       default:
@@ -49,7 +51,7 @@ class Calculator {
     }
     this.currentOperand = computation
     this.operation = undefined
-    // this.previousOperand = ''
+    this.previousOperand = ''
   }
 
   getDisplayNumber(number) {
@@ -85,7 +87,6 @@ class Calculator {
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
@@ -116,11 +117,6 @@ allClearButton.addEventListener('click', button => {
   calculator.updateDisplay()
 })
 
-deleteButton.addEventListener('click', button => {
-  calculator.delete()
-  calculator.updateDisplay()
-})
-
 document.addEventListener('keydown', function (event) {
   let patternForNumbers = /[0-9]/g;
   let patternForOperators = /[+\-*\/]/g
@@ -146,7 +142,6 @@ document.addEventListener('keydown', function (event) {
   }
   if (event.key === "Backspace") {
     event.preventDefault();
-    calculator.delete()
     calculator.updateDisplay()
   }
   if (event.key == 'Delete') {
@@ -156,3 +151,4 @@ document.addEventListener('keydown', function (event) {
   }
 
 });
+
